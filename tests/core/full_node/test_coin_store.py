@@ -6,20 +6,20 @@ from typing import List, Optional, Set, Tuple
 import aiosqlite
 import pytest
 
-from flax.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
-from flax.consensus.blockchain import Blockchain, ReceiveBlockResult
-from flax.consensus.coinbase import create_farmer_coin, create_pool_coin
-from flax.full_node.block_store import BlockStore
-from flax.full_node.coin_store import CoinStore
-from flax.full_node.mempool_check_conditions import get_name_puzzle_conditions
-from flax.types.blockchain_format.coin import Coin
-from flax.types.coin_record import CoinRecord
-from flax.types.full_block import FullBlock
-from flax.types.generator_types import BlockGenerator
-from flax.util.generator_tools import tx_removals_and_additions
-from flax.util.ints import uint64, uint32
-from flax.util.wallet_tools import WalletTool
-from flax.util.db_wrapper import DBWrapper
+from dogechia.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
+from dogechia.consensus.blockchain import Blockchain, ReceiveBlockResult
+from dogechia.consensus.coinbase import create_farmer_coin, create_pool_coin
+from dogechia.full_node.block_store import BlockStore
+from dogechia.full_node.coin_store import CoinStore
+from dogechia.full_node.mempool_check_conditions import get_name_puzzle_conditions
+from dogechia.types.blockchain_format.coin import Coin
+from dogechia.types.coin_record import CoinRecord
+from dogechia.types.full_block import FullBlock
+from dogechia.types.generator_types import BlockGenerator
+from dogechia.util.generator_tools import tx_removals_and_additions
+from dogechia.util.ints import uint64, uint32
+from dogechia.util.wallet_tools import WalletTool
+from dogechia.util.db_wrapper import DBWrapper
 from tests.setup_nodes import bt, test_constants
 
 

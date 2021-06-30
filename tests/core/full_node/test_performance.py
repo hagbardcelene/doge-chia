@@ -9,15 +9,15 @@ from typing import Dict
 import pytest
 import cProfile
 
-from flax.consensus.block_record import BlockRecord
-from flax.full_node.full_node_api import FullNodeAPI
-from flax.protocols import full_node_protocol as fnp
-from flax.types.condition_opcodes import ConditionOpcode
-from flax.types.condition_with_args import ConditionWithArgs
-from flax.types.unfinished_block import UnfinishedBlock
-from flax.util.clvm import int_to_bytes
-from flax.util.ints import uint64
-from flax.util.wallet_tools import WalletTool
+from dogechia.consensus.block_record import BlockRecord
+from dogechia.full_node.full_node_api import FullNodeAPI
+from dogechia.protocols import full_node_protocol as fnp
+from dogechia.types.condition_opcodes import ConditionOpcode
+from dogechia.types.condition_with_args import ConditionWithArgs
+from dogechia.types.unfinished_block import UnfinishedBlock
+from dogechia.util.clvm import int_to_bytes
+from dogechia.util.ints import uint64
+from dogechia.util.wallet_tools import WalletTool
 from tests.core.fixtures import empty_blockchain  # noqa: F401
 
 from tests.connection_utils import add_dummy_connection, connect_and_get_peer

@@ -1,7 +1,7 @@
-from flax.types.blockchain_format.coin import Coin
-from flax.types.blockchain_format.sized_bytes import bytes32
-from flax.util.ints import uint64
-from flax.util.hash import std_hash
+from dogechia.types.blockchain_format.coin import Coin
+from dogechia.types.blockchain_format.sized_bytes import bytes32
+from dogechia.util.ints import uint64
+from dogechia.util.hash import std_hash
 import io
 
 

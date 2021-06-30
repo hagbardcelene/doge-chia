@@ -6,13 +6,13 @@ from typing import List
 import aiosqlite
 import pytest
 
-from flax.consensus.blockchain import Blockchain
-from flax.consensus.constants import ConsensusConstants
-from flax.full_node.block_store import BlockStore
-from flax.full_node.coin_store import CoinStore
-from flax.types.full_block import FullBlock
-from flax.util.db_wrapper import DBWrapper
-from flax.util.path import mkdir
+from dogechia.consensus.blockchain import Blockchain
+from dogechia.consensus.constants import ConsensusConstants
+from dogechia.full_node.block_store import BlockStore
+from dogechia.full_node.coin_store import CoinStore
+from dogechia.types.full_block import FullBlock
+from dogechia.util.db_wrapper import DBWrapper
+from dogechia.util.path import mkdir
 from tests.setup_nodes import bt, test_constants
 
 
@@ -96,8 +96,8 @@ def persistent_blocks(
 ):
     # try loading from disc, if not create new blocks.db file
     # TODO hash fixtures.py and blocktool.py, add to path, delete if the files changed
-    block_path_dir = Path("~/.flax/blocks").expanduser()
-    file_path = Path(f"~/.flax/blocks/{db_name}").expanduser()
+    block_path_dir = Path("~/.dogechia/blocks").expanduser()
+    file_path = Path(f"~/.dogechia/blocks/{db_name}").expanduser()
     if not path.exists(block_path_dir):
         mkdir(block_path_dir.parent)
         mkdir(block_path_dir)

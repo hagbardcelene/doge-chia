@@ -18,9 +18,9 @@ fi
 if [ "$(uname -m)" = "armv7l" ]; then
   echo ""
 	echo "WARNING:"
-	echo "The Flax Blockchain requires a 64 bit OS and this is 32 bit armv7l"
+	echo "The DogeChia Blockchain requires a 64 bit OS and this is 32 bit armv7l"
 	echo "For more information, see"
-	echo "https://github.com/Flax-Network/flax-blockchain/wiki/Raspberry-Pi"
+	echo "https://github.com/DogeChia/dogechia-blockchain/wiki/Raspberry-Pi"
 	echo "Exiting."
 	exit 1
 fi
@@ -120,13 +120,13 @@ python -m pip install --extra-index-url https://pypi.chia.net/simple/ miniupnpc=
 python -m pip install -e . --extra-index-url https://pypi.chia.net/simple/
 
 echo ""
-echo "Flax blockchain install.sh complete."
+echo "DogeChia blockchain install.sh complete."
 echo "For assistance join us on Discord in the #testnet chat channel:"
-echo "https://discord.gg/TgJyxsEFFc"
+echo "https://discord.gg/FmzdcUJz"
 echo ""
-echo "Try the Quick Start Guide to running flax-blockchain:"
-echo "https://github.com/Flax-Network/flax-blockchain/wiki/Quick-Start-Guide"
+echo "Try the Quick Start Guide to running dogechia-blockchain:"
+echo "https://github.com/DogeChia/dogechia-blockchain/wiki/Quick-Start-Guide"
 echo ""
 echo "To install the GUI type 'sh install-gui.sh' after '. ./activate'."
 echo ""
-echo "Type '. ./activate' and then 'flax init' to begin."
+echo "Type '. ./activate' and then 'dogechia init' to begin."

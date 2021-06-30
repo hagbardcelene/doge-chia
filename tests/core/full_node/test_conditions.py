@@ -14,16 +14,16 @@ from blspy import G2Element
 
 from clvm_tools.binutils import assemble
 
-from flax.consensus.blockchain import ReceiveBlockResult
-from flax.consensus.constants import ConsensusConstants
-from flax.types.announcement import Announcement
-from flax.types.blockchain_format.program import Program
-from flax.types.coin_solution import CoinSolution
-from flax.types.condition_opcodes import ConditionOpcode
-from flax.types.full_block import FullBlock
-from flax.types.spend_bundle import SpendBundle
-from flax.util.block_tools import BlockTools, test_constants
-from flax.util.errors import Err
+from dogechia.consensus.blockchain import ReceiveBlockResult
+from dogechia.consensus.constants import ConsensusConstants
+from dogechia.types.announcement import Announcement
+from dogechia.types.blockchain_format.program import Program
+from dogechia.types.coin_solution import CoinSolution
+from dogechia.types.condition_opcodes import ConditionOpcode
+from dogechia.types.full_block import FullBlock
+from dogechia.types.spend_bundle import SpendBundle
+from dogechia.util.block_tools import BlockTools, test_constants
+from dogechia.util.errors import Err
 
 from .ram_db import create_ram_blockchain
 

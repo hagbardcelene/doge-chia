@@ -6,13 +6,13 @@ import time
 import pytest
 from clvm_tools import binutils
 
-from flax.consensus.condition_costs import ConditionCost
-from flax.consensus.cost_calculator import NPCResult, calculate_cost_of_program
-from flax.full_node.bundle_tools import simple_solution_generator
-from flax.full_node.mempool_check_conditions import get_name_puzzle_conditions, get_puzzle_and_solution_for_coin
-from flax.types.blockchain_format.program import Program, SerializedProgram
-from flax.types.generator_types import BlockGenerator
-from flax.wallet.puzzles import p2_delegated_puzzle_or_hidden_puzzle
+from dogechia.consensus.condition_costs import ConditionCost
+from dogechia.consensus.cost_calculator import NPCResult, calculate_cost_of_program
+from dogechia.full_node.bundle_tools import simple_solution_generator
+from dogechia.full_node.mempool_check_conditions import get_name_puzzle_conditions, get_puzzle_and_solution_for_coin
+from dogechia.types.blockchain_format.program import Program, SerializedProgram
+from dogechia.types.generator_types import BlockGenerator
+from dogechia.wallet.puzzles import p2_delegated_puzzle_or_hidden_puzzle
 from tests.setup_nodes import bt, test_constants
 
 from .make_block_generator import make_block_generator
@@ -46,7 +46,7 @@ def large_block_generator(size):
     except FileNotFoundError:
         generator = make_block_generator(size)
         blob = bytes(generator.program)
-        #  TODO: Re-enable large-block*.hex but cache in ~/.flax/subdir
+        #  TODO: Re-enable large-block*.hex but cache in ~/.dogechia/subdir
         #  with open(hex_path, "w") as f:
         #      f.write(blob.hex())
         return blob

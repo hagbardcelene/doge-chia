@@ -3,13 +3,13 @@ from unittest import TestCase
 
 from blspy import AugSchemeMPL, BasicSchemeMPL, G1Element, G2Element
 
-from flax.types.blockchain_format.program import Program
-from flax.types.blockchain_format.sized_bytes import bytes32
-from flax.types.coin_solution import CoinSolution
-from flax.types.spend_bundle import SpendBundle
-from flax.util.condition_tools import ConditionOpcode
-from flax.util.hash import std_hash
-from flax.wallet.puzzles import (
+from dogechia.types.blockchain_format.program import Program
+from dogechia.types.blockchain_format.sized_bytes import bytes32
+from dogechia.types.coin_solution import CoinSolution
+from dogechia.types.spend_bundle import SpendBundle
+from dogechia.util.condition_tools import ConditionOpcode
+from dogechia.util.hash import std_hash
+from dogechia.wallet.puzzles import (
     p2_conditions,
     p2_delegated_conditions,
     p2_delegated_puzzle,

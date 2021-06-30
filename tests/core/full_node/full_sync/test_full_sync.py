@@ -6,11 +6,11 @@ from typing import List
 
 import pytest
 
-from flax.protocols import full_node_protocol
-from flax.types.full_block import FullBlock
-from flax.types.peer_info import PeerInfo
-from flax.util.hash import std_hash
-from flax.util.ints import uint16
+from dogechia.protocols import full_node_protocol
+from dogechia.types.full_block import FullBlock
+from dogechia.types.peer_info import PeerInfo
+from dogechia.util.hash import std_hash
+from dogechia.util.ints import uint16
 from tests.core.fixtures import default_400_blocks, default_1000_blocks, default_10000_blocks, empty_blockchain
 from tests.core.node_height import node_height_exactly
 from tests.setup_nodes import bt, self_hostname, setup_n_nodes, setup_two_nodes, test_constants

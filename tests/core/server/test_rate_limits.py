@@ -2,9 +2,9 @@ import asyncio
 
 import pytest
 
-from flax.protocols.protocol_message_types import ProtocolMessageTypes
-from flax.server.outbound_message import make_msg
-from flax.server.rate_limits import RateLimiter, NON_TX_FREQ
+from dogechia.protocols.protocol_message_types import ProtocolMessageTypes
+from dogechia.server.outbound_message import make_msg
+from dogechia.server.rate_limits import RateLimiter, NON_TX_FREQ
 from tests.setup_nodes import test_constants
 
 

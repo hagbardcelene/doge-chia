@@ -5,19 +5,19 @@ from typing import List, Optional
 
 import pytest
 
-from flax.consensus.blockchain import ReceiveBlockResult
-from flax.consensus.multiprocess_validation import PreValidationResult
-from flax.consensus.pot_iterations import is_overflow_block
-from flax.full_node.full_node_store import FullNodeStore
-from flax.full_node.signage_point import SignagePoint
-from flax.protocols import timelord_protocol
-from flax.protocols.timelord_protocol import NewInfusionPointVDF
-from flax.types.blockchain_format.sized_bytes import bytes32
-from flax.types.unfinished_block import UnfinishedBlock
-from flax.util.block_cache import BlockCache
-from flax.util.block_tools import get_signage_point
-from flax.util.hash import std_hash
-from flax.util.ints import uint8, uint32, uint64, uint128
+from dogechia.consensus.blockchain import ReceiveBlockResult
+from dogechia.consensus.multiprocess_validation import PreValidationResult
+from dogechia.consensus.pot_iterations import is_overflow_block
+from dogechia.full_node.full_node_store import FullNodeStore
+from dogechia.full_node.signage_point import SignagePoint
+from dogechia.protocols import timelord_protocol
+from dogechia.protocols.timelord_protocol import NewInfusionPointVDF
+from dogechia.types.blockchain_format.sized_bytes import bytes32
+from dogechia.types.unfinished_block import UnfinishedBlock
+from dogechia.util.block_cache import BlockCache
+from dogechia.util.block_tools import get_signage_point
+from dogechia.util.hash import std_hash
+from dogechia.util.ints import uint8, uint32, uint64, uint128
 from tests.core.fixtures import default_1000_blocks, empty_blockchain  # noqa: F401
 from tests.setup_nodes import bt, test_constants
 

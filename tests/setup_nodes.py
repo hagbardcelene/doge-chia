@@ -4,24 +4,24 @@ import signal
 from secrets import token_bytes
 from typing import Dict, List, Optional
 
-from flax.consensus.constants import ConsensusConstants
-from flax.daemon.server import WebSocketServer, create_server_for_daemon, daemon_launch_lock_path, singleton
-from flax.full_node.full_node_api import FullNodeAPI
-from flax.server.start_farmer import service_kwargs_for_farmer
-from flax.server.start_full_node import service_kwargs_for_full_node
-from flax.server.start_harvester import service_kwargs_for_harvester
-from flax.server.start_introducer import service_kwargs_for_introducer
-from flax.server.start_service import Service
-from flax.server.start_timelord import service_kwargs_for_timelord
-from flax.server.start_wallet import service_kwargs_for_wallet
-from flax.simulator.start_simulator import service_kwargs_for_full_node_simulator
-from flax.timelord.timelord_launcher import kill_processes, spawn_process
-from flax.types.peer_info import PeerInfo
-from flax.util.bech32m import encode_puzzle_hash
-from flax.util.block_tools import BlockTools, test_constants
-from flax.util.hash import std_hash
-from flax.util.ints import uint16, uint32
-from flax.util.keychain import Keychain, bytes_to_mnemonic
+from dogechia.consensus.constants import ConsensusConstants
+from dogechia.daemon.server import WebSocketServer, create_server_for_daemon, daemon_launch_lock_path, singleton
+from dogechia.full_node.full_node_api import FullNodeAPI
+from dogechia.server.start_farmer import service_kwargs_for_farmer
+from dogechia.server.start_full_node import service_kwargs_for_full_node
+from dogechia.server.start_harvester import service_kwargs_for_harvester
+from dogechia.server.start_introducer import service_kwargs_for_introducer
+from dogechia.server.start_service import Service
+from dogechia.server.start_timelord import service_kwargs_for_timelord
+from dogechia.server.start_wallet import service_kwargs_for_wallet
+from dogechia.simulator.start_simulator import service_kwargs_for_full_node_simulator
+from dogechia.timelord.timelord_launcher import kill_processes, spawn_process
+from dogechia.types.peer_info import PeerInfo
+from dogechia.util.bech32m import encode_puzzle_hash
+from dogechia.util.block_tools import BlockTools, test_constants
+from dogechia.util.hash import std_hash
+from dogechia.util.ints import uint16, uint32
+from dogechia.util.keychain import Keychain, bytes_to_mnemonic
 from tests.time_out_assert import time_out_assert_custom_interval
 
 bt = BlockTools(constants=test_constants)
@@ -207,10 +207,10 @@ async def setup_farmer(
     config = bt.config["farmer"]
     config_pool = bt.config["pool"]
 
-    config["xfx_target_address"] = encode_puzzle_hash(b_tools.farmer_ph, "xfx")
+    config["xdg_target_address"] = encode_puzzle_hash(b_tools.farmer_ph, "xdg")
     config["pool_public_keys"] = [bytes(pk).hex() for pk in b_tools.pool_pubkeys]
     config["port"] = port
-    config_pool["xfx_target_address"] = encode_puzzle_hash(b_tools.pool_ph, "xfx")
+    config_pool["xdg_target_address"] = encode_puzzle_hash(b_tools.pool_ph, "xdg")
 
     if full_node_port:
         config["full_node_peer"]["host"] = self_hostname
