@@ -54,14 +54,14 @@ logging: &logging
 
 harvester:
   # The harvester server (if run) will run on this port
-  port: 6884
+  port: 6869
   farmer_peer:
     host: *self_hostname
-    port: 6885
+    port: 6969
 
   # If True, starts an RPC server at the following port
   start_rpc_server: True
-  rpc_port: 6760
+  rpc_port: 6769
   num_threads: 30
   plot_loading_frequency_seconds: 120
 
@@ -94,14 +94,14 @@ pool:
 
 farmer:
   # The farmer server (if run) will run on this port
-  port: 6885
+  port: 6969
   # The farmer will attempt to connect to this full node and harvester
   full_node_peer:
     host: *self_hostname
     port: 42069
   harvester_peer:
     host: *self_hostname
-    port: 6884
+    port: 6869
 
   pool_public_keys: []
 
@@ -240,7 +240,7 @@ full_node:
     - "dns-introducer.dogechia.org"
   farmer_peer:
       host: *self_hostname
-      port: 6885
+      port: 6969
   timelord_peer:
       host: *self_hostname
       port: 6886
