@@ -246,7 +246,7 @@ full_node:
       port: 6886
   introducer_peer:
       host: introducer.dogechia.org  # DogeChia AWS introducer IPv4/IPv6
-      port: 42069
+      port: 42070
   wallet_peer:
     host: *self_hostname
     port: 6883
@@ -328,7 +328,7 @@ wallet:
 
   introducer_peer:
     host: introducer.dogechia.org # DogeChia AWS introducer IPv4/IPv6
-    port: 42069
+    port: 42070
 
   ssl:
     private_crt:  "config/ssl/wallet/private_wallet.crt"
