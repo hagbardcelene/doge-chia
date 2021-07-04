@@ -246,7 +246,7 @@ full_node:
       port: 6886
   introducer_peer:
       host: introducer.dogechia.org  # DogeChia AWS introducer IPv4/IPv6
-      port: 42069
+      port: 6887
   wallet_peer:
     host: *self_hostname
     port: 6883
@@ -283,7 +283,7 @@ ui:
 
 introducer:
   host: *self_hostname
-  port: 42069
+  port: 6887
   max_peers_to_send: 20
   # The introducer will only return peers who it has seen in the last
   # recent_peer_threshold seconds
@@ -328,7 +328,7 @@ wallet:
 
   introducer_peer:
     host: introducer.dogechia.org # DogeChia AWS introducer IPv4/IPv6
-    port: 42069
+    port: 6887
 
   ssl:
     private_crt:  "config/ssl/wallet/private_wallet.crt"
