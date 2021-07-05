@@ -90,7 +90,7 @@ if [ ! "$CI" ]; then
 		echo ""
 	fi
 
-	npm install
+	npm install --force
 	npm audit fix || true
 	npm run build
 else
