@@ -90,7 +90,7 @@ if [ ! "$CI" ]; then
 		echo ""
 	fi
 
-	npm install --force
+	npm install --legacy-peer-deps
 	npm audit fix || true
 	npm run build
 else
