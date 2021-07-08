@@ -61,7 +61,7 @@ harvester:
 
   # If True, starts an RPC server at the following port
   start_rpc_server: True
-  rpc_port: 6769
+  rpc_port: 6770
   num_threads: 30
   plot_loading_frequency_seconds: 120
 
@@ -110,7 +110,7 @@ farmer:
 
   # If True, starts an RPC server at the following port
   start_rpc_server: True
-  rpc_port: 6759
+  rpc_port: 16759
 
   # To send a share to a pool, a proof of space must have required_iters less than this number
   pool_share_threshold: 1000
@@ -127,7 +127,7 @@ farmer:
 # Don't run this unless you want to run VDF clients on the local machine.
 timelord_launcher:
   # The server where the VDF clients will connect to.
-  port: 6600
+  port: 16669
   # Number of VDF client processes to keep alive in the local machine.
   process_count: 3
   logging: *logging
@@ -135,7 +135,7 @@ timelord_launcher:
 
 timelord:
   # The timelord server (if run) will run on this port
-  port: 6886
+  port: 16886
   # Provides a list of VDF clients expected to connect to this timelord.
   # For each client, an IP is provided, together with the estimated iterations per second.
   vdf_clients:
@@ -153,7 +153,7 @@ timelord:
   # The ip and port where the TCP clients will connect.
   vdf_server:
     host: *self_hostname
-    port: 6600
+    port: 16669
   logging: *logging
   network_overrides: *network_overrides
   selected_network: *selected_network
@@ -243,10 +243,10 @@ full_node:
       port: 6969
   timelord_peer:
       host: *self_hostname
-      port: 6886
+      port: 16886
   introducer_peer:
       host: introducer.dogechia.org  # DogeChia AWS introducer IPv4/IPv6
-      port: 6887
+      port: 42069
   wallet_peer:
     host: *self_hostname
     port: 6883
@@ -328,7 +328,7 @@ wallet:
 
   introducer_peer:
     host: introducer.dogechia.org # DogeChia AWS introducer IPv4/IPv6
-    port: 6887
+    port: 42069
 
   ssl:
     private_crt:  "config/ssl/wallet/private_wallet.crt"
