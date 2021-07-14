@@ -72,8 +72,8 @@ def get_backup_info(file_path, private_key):
 
 
 async def post(session: aiohttp.ClientSession, url: str, data: Any):
-    mozzila_root = get_mozzila_ca_crt()
-    ssl_context = ssl_context_for_root(mozzila_root)
+    mozilla_root = get_mozilla_ca_crt()
+    ssl_context = ssl_context_for_root(mozilla_root)
     response = await session.post(url, json=data, ssl=ssl_context)
     return await response.json()
 
